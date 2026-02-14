@@ -8,147 +8,256 @@
 
 <style>
 body {
-  background: #1b1d27;
-  font-family: Arial, Helvetica, sans-serif;
-  color: white;
-  margin: 0;
-  padding: 0;
+    background: #1b1d27;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-  text-align: center;
-  padding: 50px 20px 20px;
+    text-align: center;
+    padding: 50px 20px 20px;
 }
 
 header h1 {
-  font-size: 48px;
-  color: cyan;
-  margin: 0;
+    font-size: 48px;
+    color: cyan;
+    margin: 0;
 }
 
-/* Leaderboard container */
 .leaderboard-section {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 0 20px 50px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .leaderboard {
-  background: #2a2c36;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    background: #2a2c36;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 .leaderboard_row {
-  display: flex;
-  align-items: center;
-  padding: 15px 20px;
-  border-bottom: 1px solid #444;
-  transition: 0.3s;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #444;
+    transition: 0.3s;
 }
 
 .leaderboard_row:hover {
-  background: rgba(0, 255, 255, 0.1);
+    background: rgba(0, 255, 255, 0.1);
 }
 
 .rank {
-  font-size: 22px;
-  width: 50px;
-  font-weight: bold;
+    font-size: 22px;
+    width: 50px;
+    font-weight: bold;
 }
 
 .avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 12px;
-  overflow: hidden;
-  margin-right: 15px;
-  border: 2px solid cyan;
-  flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-right: 15px;
+    border: 2px solid cyan;
+    flex-shrink: 0;
 }
 
 .avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .username {
-  font-size: 20px;
-  font-weight: 600;
-  flex: 1;
+    font-size: 20px;
+    font-weight: 600;
+    flex: 1;
 }
 
 .rank_title {
-  font-size: 14px;
-  color: #ccc;
-  display: block;
+    font-size: 14px;
+    color: #ccc;
+    display: block;
 }
 
 .points {
-  font-weight: 700;
-  color: gold;
+    font-weight: 700;
+    color: gold;
 }
 
 footer {
-  text-align: center;
-  padding: 20px;
-  background: #22242e;
-  font-size: 14px;
+    text-align: center;
+    padding: 20px;
+    background: #22242e;
+    font-size: 14px;
 }
 
 footer a {
-  color: cyan;
-  text-decoration: none;
+    color: cyan;
+    text-decoration: none;
 }
 </style>
 </head>
-
 <body>
 
 <header>
-  <h1>OzamNation Leaderboard</h1>
+    <h1>OzamNation Leaderboard</h1>
 </header>
 
 <section class="leaderboard-section">
 <div class="leaderboard">
 
-  <!-- Top 20 Players -->
-  <!-- Row Example: -->
-  <div class="leaderboard_row" style="background:#f9d34233;">
+<!-- TOP 20 PLAYERS -->
+<div class="leaderboard_row" style="background:#f9d34233;">
     <div class="rank">1.</div>
     <div class="avatar"><img src="media/marlow.png" alt="Marlowww"></div>
     <div class="username">Marlowww <span class="rank_title">Combat Grandmaster</span></div>
     <div class="points">435 pts</div>
-  </div>
-  
-  <div class="leaderboard_row" style="background:#9dbcd333;">
+</div>
+
+<div class="leaderboard_row" style="background:#9dbcd333;">
     <div class="rank">2.</div>
     <div class="avatar"><img src="media/itzrealme.png" alt="ItzRealMe"></div>
     <div class="username">ItzRealMe <span class="rank_title">Combat Master</span></div>
     <div class="points">330 pts</div>
-  </div>
-  
-  <div class="leaderboard_row" style="background:#e29a6033;">
+</div>
+
+<div class="leaderboard_row" style="background:#e29a6033;">
     <div class="rank">3.</div>
     <div class="avatar"><img src="media/swight.png" alt="Swight"></div>
     <div class="username">Swight <span class="rank_title">Combat Master</span></div>
     <div class="points">290 pts</div>
-  </div>
+</div>
 
-  <!-- Add more rows up to 20 -->
-  <!-- You can change background colors slightly for variety -->
-  <!-- Example placeholders -->
-  <div class="leaderboard_row" style="background:#7ed6f133;"><div class="rank">4.</div><div class="avatar"><img src="media/player4.png" alt="Player4"></div><div class="username">Player4 <span class="rank_title">Elite Fighter</span></div><div class="points">280 pts</div></div>
-  <div class="leaderboard_row" style="background:#ff797933;"><div class="rank">5.</div><div class="avatar"><img src="media/player5.png" alt="Player5"></div><div class="username">Player5 <span class="rank_title">Elite Fighter</span></div><div class="points">275 pts</div></div>
-  <!-- continue rows 6–20 similarly -->
+<div class="leaderboard_row" style="background:#7ed6f133;">
+    <div class="rank">4.</div>
+    <div class="avatar"><img src="media/player4.png" alt="Player4"></div>
+    <div class="username">Player4 <span class="rank_title">Elite Fighter</span></div>
+    <div class="points">280 pts</div>
+</div>
+
+<div class="leaderboard_row" style="background:#ff797933;">
+    <div class="rank">5.</div>
+    <div class="avatar"><img src="media/player5.png" alt="Player5"></div>
+    <div class="username">Player5 <span class="rank_title">Elite Fighter</span></div>
+    <div class="points">275 pts</div>
+</div>
+
+<div class="leaderboard_row" style="background:#55efc433;">
+    <div class="rank">6.</div>
+    <div class="avatar"><img src="media/player6.png" alt="Player6"></div>
+    <div class="username">Player6 <span class="rank_title">Pro Fighter</span></div>
+    <div class="points">265 pts</div>
+</div>
+
+<div class="leaderboard_row" style="background:#fd79a833;">
+    <div class="rank">7.</div>
+    <div class="avatar"><img src="media/player7.png" alt="Player7"></div>
+    <div class="username">Player7 <span class="rank_title">Pro Fighter</span></div>
+    <div class="points">260 pts</div>
+</div>
+
+<div class="leaderboard_row" style="background:#00cec033;">
+    <div class="rank">8.</div>
+    <div class="avatar"><img src="media/player8.png" alt="Player8"></div>
+    <div class="username">Player8 <span class="rank_title">Fighter</span></div>
+    <div class="points">250 pts</div>
+</div>
+
+<div class="leaderboard_row" style="background:#0984e333;">
+    <div class="rank">9.</div>
+    <div class="avatar"><img src="media/player9.png" alt="Player9"></div>
+    <div class="username">Player9 <span class="rank_title">Fighter</span></div>
+    <div class="points">245 pts</div>
+</div>
+
+<div class="leaderboard_row" style="background:#6c5ce733;">
+    <div class="rank">10.</div>
+    <div class="avatar"><img src="media/player10.png" alt="Player10"></div>
+    <div class="username">Player10 <span class="rank_title">Fighter</span></div>
+    <div class="points">240 pts</div>
+</div>
+
+<div class="leaderboard_row" style="background:#fdcb6e33;">
+    <div class="rank">11.</div>
+    <div class="avatar"><img src="media/player11.png" alt="Player11"></div>
+    <div class="username">Player11 <span class="rank_title">Rising Star</span></div>
+    <div class="points">235 pts</div>
+</div>
+
+<div class="leaderboard_row" style="background:#e1705533;">
+    <div class="rank">12.</div>
+    <div class="avatar"><img src="media/player12.png" alt="Player12"></div>
+    <div class="username">Player12 <span class="rank_title">Rising Star</span></div>
+    <div class="points">230 pts</div>
+</div>
+
+<div class="leaderboard_row" style="background:#00b89433;">
+    <div class="rank">13.</div>
+    <div class="avatar"><img src="media/player13.png" alt="Player13"></div>
+    <div class="username">Player13 <span class="rank_title">Rising Star</span></div>
+    <div class="points">225 pts</div>
+</div>
+
+<div class="leaderboard_row" style="background:#6c5ce733;">
+    <div class="rank">14.</div>
+    <div class="avatar"><img src="media/player14.png" alt="Player14"></div>
+    <div class="username">Player14 <span class="rank_title">Challenger</span></div>
+    <div class="points">220 pts</div>
+</div>
+
+<div class="leaderboard_row" style="background:#ffeaa733;">
+    <div class="rank">15.</div>
+    <div class="avatar"><img src="media/player15.png" alt="Player15"></div>
+    <div class="username">Player15 <span class="rank_title">Challenger</span></div>
+    <div class="points">215 pts</div>
+</div>
+
+<div class="leaderboard_row" style="background:#fab1a033;">
+    <div class="rank">16.</div>
+    <div class="avatar"><img src="media/player16.png" alt="Player16"></div>
+    <div class="username">Player16 <span class="rank_title">Challenger</span></div>
+    <div class="points">210 pts</div>
+</div>
+
+<div class="leaderboard_row" style="background:#74b9ff33;">
+    <div class="rank">17.</div>
+    <div class="avatar"><img src="media/player17.png" alt="Player17"></div>
+    <div class="username">Player17 <span class="rank_title">Contender</span></div>
+    <div class="points">205 pts</div>
+</div>
+
+<div class="leaderboard_row" style="background:#a29bfe33;">
+    <div class="rank">18.</div>
+    <div class="avatar"><img src="media/player18.png" alt="Player18"></div>
+    <div class="username">Player18 <span class="rank_title">Contender</span></div>
+    <div class="points">200 pts</div>
+</div>
+
+<div class="leaderboard_row" style="background:#fd79a833;">
+    <div class="rank">19.</div>
+    <div class="avatar"><img src="media/player19.png" alt="Player19"></div>
+    <div class="username">Player19 <span class="rank_title">Contender</span></div>
+    <div class="points">195 pts</div>
+</div>
+
+<div class="leaderboard_row" style="background:#00cec033;">
+    <div class="rank">20.</div>
+    <div class="avatar"><img src="media/player20.png" alt="Player20"></div>
+    <div class="username">Player20 <span class="rank_title">Rookie</span></div>
+    <div class="points">190 pts</div>
+</div>
 
 </div>
 </section>
 
 <footer>
-  <a href="https://www.youtube.com/@OzamGameOver">Made by Ozam • 2026</a>
+    <a href="https://www.youtube.com/@OzamGameOver">Made by Ozam • 2026</a>
 </footer>
 
 </body>
