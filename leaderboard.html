@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OzamNation | Leaderboard</title>
+<link rel="icon" href="media/favicon.png" type="image/png">
+
+<style>
+body{
+  background:#1b1d27;
+  font-family:Arial, Helvetica, sans-serif;
+  color:white;
+  padding:50px;
+}
+
+h1{
+  text-align:center;
+  font-size:48px;
+  margin-bottom:50px;
+  color:cyan;
+}
+
+/* Leaderboard container */
+.leaderboard{
+  max-width:600px;
+  margin:0 auto;
+  background:#2a2c36;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Leaderboard rows */
+.leaderboard_row{
+  display:flex;
+  align-items:center;
+  padding:15px 20px;
+  border-bottom:1px solid #444;
+  transition:0.3s;
+}
+
+.leaderboard_row:hover{
+  background:rgba(0,255,255,0.1);
+}
+
+.rank{
+  font-size:22px;
+  width:40px;
+  font-weight:bold;
+}
+
+.avatar{
+  width:50px;
+  height:50px;
+  border-radius:10px;
+  overflow:hidden;
+  margin-right:15px;
+  border:2px solid cyan;
+  flex-shrink:0;
+}
+
+.avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.username{
+  font-size:20px;
+  font-weight:600;
+  flex:1;
+}
+
+.rank_title{
+  font-size:14px;
+  color:#ccc;
+  display:block;
+}
+
+.points{
+  font-weight:700;
+  color:gold;
+}
+</style>
+</head>
+
+<body>
+
+<h1>OzamNation Leaderboard</h1>
+
+<div class="leaderboard">
+  <div class="leaderboard_row" style="background:#f9d34233;">
+    <div class="rank">1.</div>
+    <div class="avatar"><img src="media/marlow.png" alt="Marlowww"></div>
+    <div class="username">Marlowww <span class="rank_title">Combat Grandmaster</span></div>
+    <div class="points">435 pts</div>
+  </div>
+  
+  <div class="leaderboard_row" style="background:#9dbcd333;">
+    <div class="rank">2.</div>
+    <div class="avatar"><img src="media/itzrealme.png" alt="ItzRealMe"></div>
+    <div class="username">ItzRealMe <span class="rank_title">Combat Master</span></div>
+    <div class="points">330 pts</div>
+  </div>
+  
+  <div class="leaderboard_row" style="background:#e29a6033;">
+    <div class="rank">3.</div>
+    <div class="avatar"><img src="media/swight.png" alt="Swight"></div>
+    <div class="username">Swight <span class="rank_title">Combat Master</span></div>
+    <div class="points">290 pts</div>
+  </div>
+  
+  <!-- Add more rows similarly -->
+  
+</div>
+
+</body>
+</html>
