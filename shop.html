@@ -1,55 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- ================= META ================= -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OzamNation Ranks Shop</title>
+
+    <!-- ================= TITLE ================= -->
+    <title>OzamNation | Ranks Shop</title>
+
+    <!-- ================= STYLES ================= -->
     <link rel="stylesheet" href="media/style.css">
+
+    <!-- ================= ICON ================= -->
     <link rel="icon" href="media/favicon.png" type="image/png">
 </head>
+
 <body>
-    <!-- Navbar -->
+
+    <!-- ==================================================
+                         NAVBAR
+    =================================================== -->
     <nav class="desktop_navbar">
-        <a href="index.html"><img class="desktop_navbar_logo_img" src="media/logo_small.png" alt="logo"></a>
-        <a href="index.html#discord" class="desktop_navbar_link scroll">Community</a>
-        <a href="index.html#about" class="desktop_navbar_link scroll">About Us</a>
+        <a href="index.html">
+            <img class="desktop_navbar_logo_img" src="media/logo_small.png" alt="OzamNation Logo">
+        </a>
+
+        <div class="desktop_navbar_links">
+            <a href="index.html" class="desktop_navbar_link">Home</a>
+            <a href="index.html#about" class="desktop_navbar_link scroll">About</a>
+            <a href="index.html#discord" class="desktop_navbar_link scroll">Community</a>
+            <a href="shop.html" class="desktop_navbar_link active">Shop</a>
+        </div>
     </nav>
 
-    <!-- Shop Section -->
-    <div class="shop_page">
-        <h1 class="headline">Ranks Shop</h1>
+    <!-- ==================================================
+                       SHOP HEADER
+    =================================================== -->
+    <header class="shop_header">
+        <h1 class="shop_title">OzamNation Ranks Shop</h1>
+        <p class="shop_subtitle">
+            Upgrade your experience, unlock exclusive perks, and support the server.
+        </p>
+    </header>
+
+    <!-- ==================================================
+                       SHOP SECTION
+    =================================================== -->
+    <section class="shop_page">
+
         <div class="shop_items_div">
-            <!-- VIP Rank -->
+
+            <!-- ==================================================
+                           RANK 1
+            =================================================== -->
+            <div class="shop_item">
+                <img src="media/rank_default.png" alt="Member Rank">
+                <h2 class="shop_item_title">MEMBER</h2>
+                <p class="shop_item_description">
+                    Basic rank with chat access and standard gameplay features.
+                </p>
+                <p class="shop_item_price">Price: Free</p>
+                <a href="#join" class="shop_item_button disabled">Default</a>
+            </div>
+
+            <!-- ==================================================
+                           RANK 2
+            =================================================== -->
             <div class="shop_item">
                 <img src="media/rank_vip.png" alt="VIP Rank">
-                <a class="shop_item_title">VIP</a>
-                <a class="shop_item_description">
-                    Unlock custom color, badge, and VIP perks!
-                </a>
-                <a class="shop_item_price">Price: $5</a>
+                <h2 class="shop_item_title">VIP</h2>
+                <p class="shop_item_description">
+                    Colored chat, VIP badge, and small in-game perks.
+                </p>
+                <p class="shop_item_price">Price: $5</p>
                 <a href="#join" class="shop_item_button">Buy Now</a>
             </div>
-            <!-- MVP Rank -->
+
+            <!-- ==================================================
+                           RANK 3
+            =================================================== -->
+            <div class="shop_item">
+                <img src="media/rank_vipplus.png" alt="VIP+ Rank">
+                <h2 class="shop_item_title">VIP+</h2>
+                <p class="shop_item_description">
+                    VIP perks plus more commands and priority support.
+                </p>
+                <p class="shop_item_price">Price: $7</p>
+                <a href="#join" class="shop_item_button">Buy Now</a>
+            </div>
+
+            <!-- ==================================================
+                           RANK 4
+            =================================================== -->
             <div class="shop_item">
                 <img src="media/rank_mvp.png" alt="MVP Rank">
-                <a class="shop_item_title">MVP</a>
-                <a class="shop_item_description">
-                    All VIP perks + priority queue and exclusive features.
-                </a>
-                <a class="shop_item_price">Price: $10</a>
+                <h2 class="shop_item_title">MVP</h2>
+                <p class="shop_item_description">
+                    Access to MVP commands, priority queue, and exclusive kits.
+                </p>
+                <p class="shop_item_price">Price: $10</p>
                 <a href="#join" class="shop_item_button">Buy Now</a>
             </div>
-            <!-- LEGEND Rank -->
+
+            <!-- ==================================================
+                           RANK 5
+            =================================================== -->
             <div class="shop_item">
-                <img src="media/rank_legend.png" alt="LEGEND Rank">
-                <a class="shop_item_title">LEGEND</a>
-                <a class="shop_item_description">
-                    All perks unlocked + special powers and legendary badge.
-                </a>
-                <a class="shop_item_price">Price: $20</a>
+                <img src="media/rank_mvpplus.png" alt="MVP+ Rank">
+                <h2 class="shop_item_title">MVP+</h2>
+                <p class="shop_item_description">
+                    Everything in MVP plus special effects and cosmetics.
+                </p>
+                <p class="shop_item_price">Price: $13</p>
                 <a href="#join" class="shop_item_button">Buy Now</a>
             </div>
+
+            <!-- ==================================================
+                           RANK 6
+            =================================================== -->
+            <div class="shop_item">
+                <img src="media/rank_elite.png" alt="Elite Rank">
+                <h2 class="shop_item_title">ELITE</h2>
+                <p class="shop_item_description">
+                    Powerful commands, elite chat tag, and bonus rewards.
+                </p>
+                <p class="shop_item_price">Price: $15</p>
+                <a href="#join" class="shop_item_button">Buy Now</a>
+            </div>
+
+            <!-- ==================================================
+                           RANK 7
+            =================================================== -->
+            <div class="shop_item">
+                <img src="media/rank_hero.png" alt="Hero Rank">
+                <h2 class="shop_item_title">HERO</h2>
+                <p class="shop_item_description">
+                    Heroic abilities, rare cosmetics, and special permissions.
+                </p>
+                <p class="shop_item_price">Price: $18</p>
+                <a href="#join" class="shop_item_button">Buy Now</a>
+            </div>
+
+            <!-- ==================================================
+                           RANK 8
+            =================================================== -->
+            <div class="shop_item">
+                <img src="media/rank_legend.png" alt="Legend Rank">
+                <h2 class="shop_item_title">LEGEND</h2>
+                <p class="shop_item_description">
+                    Legendary powers, unique badge, and server-wide perks.
+                </p>
+                <p class="shop_item_price">Price: $20</p>
+                <a href="#join" class="shop_item_button">Buy Now</a>
+            </div>
+
+            <!-- ==================================================
+                           RANK 9
+            =================================================== -->
+            <div class="shop_item">
+                <img src="media/rank_mythic.png" alt="Mythic Rank">
+                <h2 class="shop_item_title">MYTHIC</h2>
+                <p class="shop_item_description">
+                    Mythic-level perks, glowing name, and rare commands.
+                </p>
+                <p class="shop_item_price">Price: $25</p>
+                <a href="#join" class="shop_item_button">Buy Now</a>
+            </div>
+
+            <!-- ==================================================
+                           RANK 10
+            =================================================== -->
+            <div class="shop_item">
+                <img src="media/rank_titan.png" alt="Titan Rank">
+                <h2 class="shop_item_title">TITAN</h2>
+                <p class="shop_item_description">
+                    Titan strength perks, exclusive items, and priority support.
+                </p>
+                <p class="shop_item_price">Price: $30</p>
+                <a href="#join" class="shop_item_button">Buy Now</a>
+            </div>
+
+            <!-- ==================================================
+                           RANK 11
+            =================================================== -->
+            <div class="shop_item">
+                <img src="media/rank_god.png" alt="God Rank">
+                <h2 class="shop_item_title">GOD</h2>
+                <p class="shop_item_description">
+                    Almost unlimited features, godly commands, and prestige.
+                </p>
+                <p class="shop_item_price">Price: $40</p>
+                <a href="#join" class="shop_item_button">Buy Now</a>
+            </div>
+
+            <!-- ==================================================
+                           RANK 12
+            =================================================== -->
+            <div class="shop_item featured">
+                <img src="media/rank_owner.png" alt="Immortal Rank">
+                <h2 class="shop_item_title">IMMORTAL</h2>
+                <p class="shop_item_description">
+                    Ultimate rank. All perks unlocked. Special recognition forever.
+                </p>
+                <p class="shop_item_price">Price: $50</p>
+                <a href="#join" class="shop_item_button highlight">Buy Now</a>
+            </div>
+
         </div>
-    </div>
+    </section>
+
+    <!-- ==================================================
+                         FOOTER
+    =================================================== -->
+    <footer class="site_footer">
+        <p>
+            © 2026 OzamNation — All Rights Reserved
+        </p>
+        <p class="footer_small">
+            This store is not affiliated with Mojang or Microsoft.
+        </p>
+    </footer>
+
 </body>
 </html>
