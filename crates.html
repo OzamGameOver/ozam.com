@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OzamNation | Crates Shop</title>
+<link rel="icon" href="media/favicon.png" type="image/png">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:#05060a;
+  color:white;
+}
+
+/* ================= NAVBAR ================= */
+.desktop_navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 8%;
+  background:rgba(0,0,0,0.8);
+  backdrop-filter:blur(10px);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.desktop_navbar_logo_img{
+  height:45px;
+}
+
+.desktop_navbar_links a{
+  color:#ccc;
+  margin-left:25px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.desktop_navbar_links a.active,
+.desktop_navbar_links a:hover{
+  color:white;
+}
+
+/* ================= TOP HERO ================= */
+.mainflex{
+  height:80vh;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,0.7), #05060a),
+    url("media/hero_bg.jpg");
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.main1_logo{
+  width:420px;
+  transition:0.4s ease;
+}
+
+.main1_logo:hover{
+  transform:scale(1.15);
+}
+
+.main1_description{
+  margin-top:25px;
+  font-size:42px;
+  font-weight:900;
+  letter-spacing:2px;
+}
+
+.main1_actcent{
+  color:cyan;
+}
+
+/* ================= SHOP HEADER ================= */
+.shop_header{
+  padding:100px 10% 60px;
+  text-align:center;
+}
+
+.shop_title{
+  font-size:68px;
+  font-weight:900;
+}
+
+.shop_subtitle{
+  font-size:22px;
+  color:#aaa;
+  margin-top:15px;
+}
+
+/* ================= SHOP ================= */
+.shop_page{
+  padding:80px 8% 140px;
+}
+
+.shop_items_grid{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:40px;
+}
+
+/* ================= CARD ================= */
+.shop_item{
+  background:linear-gradient(145deg,#0f1324,#070914);
+  border-radius:26px;
+  padding:45px 25px;
+  text-align:center;
+  transition:0.35s;
+  border:2px solid cyan;
+  box-shadow:0 0 30px cyan;
+}
+
+.shop_item img{
+  width:110px;
+  margin-bottom:20px;
+}
+
+.shop_item h2{
+  font-size:30px;
+  margin-bottom:10px;
+  color:cyan;
+}
+
+.shop_item p{
+  color:#bbb;
+  margin-bottom:18px;
+}
+
+.shop_item span{
+  font-size:28px;
+  font-weight:900;
+  display:block;
+  margin-bottom:22px;
+}
+
+.shop_item_button{
+  display:inline-block;
+  padding:14px 34px;
+  border-radius:50px;
+  background:linear-gradient(90deg,cyan,blue);
+  color:white;
+  font-weight:800;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.shop_item:hover{
+  transform:translateY(-12px) scale(1.05);
+  box-shadow:0 40px 80px rgba(0,255,255,0.7);
+}
+
+.shop_item_button:hover{
+  background:linear-gradient(90deg,blue,cyan);
+}
+
+/* ================= SPECIAL CRATES ================= */
+.legendary{
+  border:2px solid gold;
+  box-shadow:0 0 50px gold;
+}
+
+.legendary h2{
+  color:gold;
+}
+
+.legendary .shop_item_button{
+  background:linear-gradient(90deg,gold,orange);
+  color:black;
+  font-weight:900;
+}
+
+.mythic{
+  border:2px solid #ff00ff;
+  box-shadow:0 0 50px #ff00ff;
+}
+
+.mythic h2{
+  color:#ff00ff;
+}
+
+.mythic .shop_item_button{
+  background:linear-gradient(90deg,#ff00ff,#ff77ff);
+}
+
+/* ================= FOOTER ================= */
+footer{
+  background:#03040a;
+  padding:40px;
+  text-align:center;
+}
+
+footer a{
+  color:#777;
+  text-decoration:none;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:1200px){
+  .shop_items_grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:600px){
+  .shop_items_grid{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav class="desktop_navbar">
+  <a href="index.html"><img class="desktop_navbar_logo_img" src="media/logo_small.png"></a>
+  <div class="desktop_navbar_links">
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#discord">Community</a>
+    <a href="crates.html" class="active">Crates</a>
+  </div>
+</nav>
+
+<div class="mainflex">
+  <div class="main1">
+    <a class="main1_logo_a" href="#">
+      <img class="main1_logo" src="media/OZAM-NATION (1).png" alt="logo">
+    </a>
+    <div class="main1_description">
+      Unlock,<span class="main1_actcent"> level up your loot</span>.
+    </div>
+  </div>
+</div>
+
+<header class="shop_header">
+  <h1 class="shop_title">OzamNation Crates Shop</h1>
+  <p class="shop_subtitle">Open crates and get powerful rewards!</p>
+</header>
+
+<section class="shop_page">
+<div class="shop_items_grid">
+
+<!-- 12 CRATES -->
+<div class="shop_item"><img src="media/crate_basic.png"><h2>Basic Crate</h2><p>Starter rewards</p><span>$5</span><a class="shop_item_button">Buy Key</a></div>
+<div class="shop_item"><img src="media/crate_vip.png"><h2>VIP Crate</h2><p>Better items</p><span>$7</span><a class="shop_item_button">Buy Key</a></div>
+<div class="shop_item"><img src="media/crate_mvp.png"><h2>MVP Crate</h2><p>Exclusive rewards</p><span>$10</span><a class="shop_item_button">Buy Key</a></div>
+<div class="shop_item"><img src="media/crate_elite.png"><h2>Elite Crate</h2><p>High-tier loot</p><span>$12</span><a class="shop_item_button">Buy Key</a></div>
+
+<div class="shop_item"><img src="media/crate_hero.png"><h2>Hero Crate</h2><p>Heroic rewards</p><span>$15</span><a class="shop_item_button">Buy Key</a></div>
+<div class="shop_item"><img src="media/crate_legend.png"><h2>Legend Crate</h2><p>Legendary drops</p><span>$18</span><a class="shop_item_button">Buy Key</a></div>
+<div class="shop_item mythic"><img src="media/crate_mythic.png"><h2>Mythic Crate</h2><p>Epic items</p><span>$22</span><a class="shop_item_button">Buy Key</a></div>
+<div class="shop_item"><img src="media/crate_titan.png"><h2>Titan Crate</h2><p>Strong rewards</p><span>$25</span><a class="shop_item_button">Buy Key</a></div>
+
+<div class="shop_item"><img src="media/crate_god.png"><h2>God Crate</h2><p>Godly loot</p><span>$30</span><a class="shop_item_button">Buy Key</a></div>
+<div class="shop_item legendary"><img src="media/crate_immortal.png"><h2>Immortal Crate</h2><p>All perks inside</p><span>$40</span><a class="shop_item_button">Buy Key</a></div>
+<div class="shop_item legendary"><img src="media/crate_supreme.png"><h2>Supreme Crate</h2><p>Absolute rewards</p><span>$50</span><a class="shop_item_button">Buy Key</a></div>
+<div class="shop_item mythic"><img src="media/crate_ultimate.png"><h2>Ultimate Crate</h2><p>Top-tier loot</p><span>$60</span><a class="shop_item_button">Buy Key</a></div>
+
+</div>
+</section>
+
+<footer>
+  <a href="https://www.youtube.com/@OzamGameOver">Made by Ozam • 2026</a>
+</footer>
+
+</body>
+</html>
