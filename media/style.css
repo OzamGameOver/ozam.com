@@ -580,69 +580,76 @@ body {
 }
 
 
-.shop_page {
-    text-align: center;
-    padding: 50px 20px;
+/* ===== SHOP GRID ===== */
+.shop_items_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1400px;
+  margin: auto;
+  padding: 40px;
 }
 
-.shop_items_div {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
+/* ===== SHOP ITEM ===== */
 .shop_item {
-    background: #1e1e1e;
-    color: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    width: 250px;
-    text-align: center;
-    transition: 0.3s;
+  background: #0f172a;
+  border-radius: 14px;
+  padding: 25px;
+  text-align: center;
+  transition: 0.3s;
 }
 
 .shop_item:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 6px 20px rgba(0,0,0,0.3);
+  transform: translateY(-6px);
 }
 
 .shop_item img {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 10px;
+  width: 90px;
+  margin-bottom: 15px;
 }
 
-.shop_item_title {
-    font-size: 20px;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
+.shop_item h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
-.shop_item_description {
-    font-size: 14px;
-    margin-bottom: 10px;
-    display: block;
+.shop_item p {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 10px;
 }
 
-.shop_item_price {
-    font-weight: bold;
-    margin-bottom: 10px;
-    display: block;
+.shop_item span {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
 .shop_item_button {
-    display: inline-block;
-    padding: 8px 16px;
-    border-radius: 8px;
-    background: linear-gradient(90deg, #ff7f50, #ff6347);
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
+  display: inline-block;
+  padding: 10px 22px;
+  background: #22c55e;
+  color: #000;
+  border-radius: 8px;
+  text-decoration: none;
 }
-.shop_item_button:hover {
-    transform: scale(1.05);
+
+/* ===== FEATURED ===== */
+.shop_item.featured {
+  border: 2px solid gold;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1100px) {
+  .shop_items_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .shop_items_grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 
