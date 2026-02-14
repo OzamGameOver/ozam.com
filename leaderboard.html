@@ -7,89 +7,115 @@
 <link rel="icon" href="media/favicon.png" type="image/png">
 
 <style>
-body{
-  background:#1b1d27;
-  font-family:Arial, Helvetica, sans-serif;
-  color:white;
-  padding:50px;
+body {
+  background: #1b1d27;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
 }
 
-h1{
-  text-align:center;
-  font-size:48px;
-  margin-bottom:50px;
-  color:cyan;
+header {
+  text-align: center;
+  padding: 50px 20px 20px;
+}
+
+header h1 {
+  font-size: 48px;
+  color: cyan;
+  margin: 0;
 }
 
 /* Leaderboard container */
-.leaderboard{
-  max-width:600px;
-  margin:0 auto;
-  background:#2a2c36;
-  border-radius:20px;
-  overflow:hidden;
-  box-shadow:0 10px 30px rgba(0,0,0,0.5);
+.leaderboard-section {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px 50px;
 }
 
-/* Leaderboard rows */
-.leaderboard_row{
-  display:flex;
-  align-items:center;
-  padding:15px 20px;
-  border-bottom:1px solid #444;
-  transition:0.3s;
+.leaderboard {
+  background: #2a2c36;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-.leaderboard_row:hover{
-  background:rgba(0,255,255,0.1);
+.leaderboard_row {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #444;
+  transition: 0.3s;
 }
 
-.rank{
-  font-size:22px;
-  width:40px;
-  font-weight:bold;
+.leaderboard_row:hover {
+  background: rgba(0, 255, 255, 0.1);
 }
 
-.avatar{
-  width:50px;
-  height:50px;
-  border-radius:10px;
-  overflow:hidden;
-  margin-right:15px;
-  border:2px solid cyan;
-  flex-shrink:0;
+.rank {
+  font-size: 22px;
+  width: 50px;
+  font-weight: bold;
 }
 
-.avatar img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-right: 15px;
+  border: 2px solid cyan;
+  flex-shrink: 0;
 }
 
-.username{
-  font-size:20px;
-  font-weight:600;
-  flex:1;
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.rank_title{
-  font-size:14px;
-  color:#ccc;
-  display:block;
+.username {
+  font-size: 20px;
+  font-weight: 600;
+  flex: 1;
 }
 
-.points{
-  font-weight:700;
-  color:gold;
+.rank_title {
+  font-size: 14px;
+  color: #ccc;
+  display: block;
+}
+
+.points {
+  font-weight: 700;
+  color: gold;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #22242e;
+  font-size: 14px;
+}
+
+footer a {
+  color: cyan;
+  text-decoration: none;
 }
 </style>
 </head>
 
 <body>
 
-<h1>OzamNation Leaderboard</h1>
+<header>
+  <h1>OzamNation Leaderboard</h1>
+</header>
 
+<section class="leaderboard-section">
 <div class="leaderboard">
+
+  <!-- Top 20 Players -->
+  <!-- Row Example: -->
   <div class="leaderboard_row" style="background:#f9d34233;">
     <div class="rank">1.</div>
     <div class="avatar"><img src="media/marlow.png" alt="Marlowww"></div>
@@ -110,10 +136,20 @@ h1{
     <div class="username">Swight <span class="rank_title">Combat Master</span></div>
     <div class="points">290 pts</div>
   </div>
-  
-  <!-- Add more rows similarly -->
-  
+
+  <!-- Add more rows up to 20 -->
+  <!-- You can change background colors slightly for variety -->
+  <!-- Example placeholders -->
+  <div class="leaderboard_row" style="background:#7ed6f133;"><div class="rank">4.</div><div class="avatar"><img src="media/player4.png" alt="Player4"></div><div class="username">Player4 <span class="rank_title">Elite Fighter</span></div><div class="points">280 pts</div></div>
+  <div class="leaderboard_row" style="background:#ff797933;"><div class="rank">5.</div><div class="avatar"><img src="media/player5.png" alt="Player5"></div><div class="username">Player5 <span class="rank_title">Elite Fighter</span></div><div class="points">275 pts</div></div>
+  <!-- continue rows 6–20 similarly -->
+
 </div>
+</section>
+
+<footer>
+  <a href="https://www.youtube.com/@OzamGameOver">Made by Ozam • 2026</a>
+</footer>
 
 </body>
 </html>
