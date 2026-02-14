@@ -1,209 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OzamNation | Ranks Shop</title>
-  <link rel="icon" href="media/favicon.png" type="image/png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OzamNation | Ranks Shop</title>
+<link rel="icon" href="media/favicon.png" type="image/png">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
 
-    body {
-      background: radial-gradient(circle at top, #0b0f1a, #05060a);
-      color: white;
-    }
+body{
+  background:#05060a;
+  color:white;
+}
 
-    /* ================= NAVBAR ================= */
-    .desktop_navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 8%;
-      background: rgba(0,0,0,0.7);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(10px);
-    }
+/* ================= NAVBAR ================= */
+.desktop_navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 8%;
+  background:rgba(0,0,0,0.8);
+  backdrop-filter:blur(10px);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
 
-    .desktop_navbar_logo_img {
-      height: 45px;
-    }
+.desktop_navbar_logo_img{
+  height:45px;
+}
 
-    .desktop_navbar_links a {
-      color: #ccc;
-      margin-left: 25px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s;
-    }
+.desktop_navbar_links a{
+  color:#ccc;
+  margin-left:25px;
+  text-decoration:none;
+  font-weight:600;
+}
 
-    .desktop_navbar_links a:hover,
-    .desktop_navbar_links .active {
-      color: #fff;
-    }
+.desktop_navbar_links a.active,
+.desktop_navbar_links a:hover{
+  color:white;
+}
 
-    /* ================= HERO ================= */
-    .mainflex {
-      height: 70vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
+/* ================= TOP HERO (LOGO AREA) ================= */
+.mainflex{
+  height:80vh;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,0.7), #05060a),
+    url("media/hero_bg.jpg");
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
 
-    .main1_logo {
-      width: 300px;
-      margin-bottom: 30px;
-    }
+.main1_logo{
+  width:420px;
+  transition:0.4s ease;
+}
 
-    .main1_description {
-      font-size: 40px;
-      font-weight: 900;
-      letter-spacing: 2px;
-    }
+.main1_logo:hover{
+  transform:scale(1.15);
+}
 
-    .main1_actcent {
-      color: gold;
-      margin-left: 10px;
-    }
+.main1_description{
+  margin-top:25px;
+  font-size:42px;
+  font-weight:900;
+  letter-spacing:2px;
+}
 
-    /* ================= SHOP HEADER ================= */
-    .shop_header {
-      text-align: center;
-      padding: 100px 10% 40px;
-    }
+.main1_actcent{
+  color:gold;
+}
 
-    .shop_title {
-      font-size: 70px;
-      font-weight: 900;
-      margin-bottom: 20px;
-    }
+/* ================= SHOP HEADER ================= */
+.shop_header{
+  padding:100px 10% 60px;
+  text-align:center;
+}
 
-    .shop_subtitle {
-      color: #aaa;
-      font-size: 22px;
-    }
+.shop_title{
+  font-size:68px;
+  font-weight:900;
+}
 
-    /* ================= SHOP ================= */
-    .shop_page {
-      padding: 80px 8% 120px;
-    }
+.shop_subtitle{
+  font-size:22px;
+  color:#aaa;
+  margin-top:15px;
+}
 
-    .headline {
-      text-align: center;
-      font-size: 64px;
-      font-weight: 900;
-      margin-bottom: 80px;
-    }
+/* ================= SHOP ================= */
+.shop_page{
+  padding:80px 8% 140px;
+}
 
-    .shop_items_grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 45px;
-    }
+.shop_items_grid{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:40px;
+}
 
-    .shop_item {
-      background: linear-gradient(145deg, #0f1324, #070914);
-      border-radius: 26px;
-      padding: 50px 30px;
-      text-align: center;
-      transition: 0.4s;
-      box-shadow: 0 0 0 rgba(0,0,0,0);
-    }
+/* ================= CARD ================= */
+.shop_item{
+  background:linear-gradient(145deg,#0f1324,#070914);
+  border-radius:26px;
+  padding:45px 25px;
+  text-align:center;
+  transition:0.35s;
+}
 
-    .shop_item img {
-      width: 120px;
-      margin-bottom: 25px;
-    }
+.shop_item img{
+  width:110px;
+  margin-bottom:20px;
+}
 
-    .shop_item h2 {
-      font-size: 32px;
-      margin-bottom: 12px;
-    }
+.shop_item h2{
+  font-size:30px;
+  margin-bottom:10px;
+}
 
-    .shop_item p {
-      color: #bbb;
-      margin-bottom: 20px;
-    }
+.shop_item p{
+  color:#bbb;
+  margin-bottom:18px;
+}
 
-    .shop_item span {
-      display: block;
-      font-size: 30px;
-      font-weight: 900;
-      margin-bottom: 25px;
-    }
+.shop_item span{
+  font-size:28px;
+  font-weight:900;
+  display:block;
+  margin-bottom:22px;
+}
 
-    .shop_item_button {
-      display: inline-block;
-      padding: 16px 38px;
-      border-radius: 50px;
-      background: #5865f2;
-      color: white;
-      font-weight: 800;
-      text-decoration: none;
-      transition: 0.3s;
-    }
+.shop_item_button{
+  display:inline-block;
+  padding:14px 34px;
+  border-radius:50px;
+  background:#5865f2;
+  color:white;
+  font-weight:800;
+  text-decoration:none;
+  transition:0.3s;
+}
 
-    .shop_item:hover {
-      transform: translateY(-15px) scale(1.05);
-      box-shadow: 0 40px 90px rgba(0,0,0,0.8);
-    }
+.shop_item:hover{
+  transform:translateY(-12px) scale(1.05);
+  box-shadow:0 40px 80px rgba(0,0,0,0.7);
+}
 
-    .shop_item_button:hover {
-      background: #7b86ff;
-      transform: scale(1.1);
-    }
+.shop_item_button:hover{
+  background:#7b86ff;
+}
 
-    /* ================= IMMORTAL ================= */
-    .featured {
-      border: 2px solid #ff003c;
-      box-shadow: 0 0 60px rgba(255,0,60,0.6);
-    }
+/* ================= IMMORTAL ================= */
+.immortal{
+  border:2px solid #ff003c;
+  box-shadow:0 0 45px rgba(255,0,60,0.6);
+}
 
-    .featured h2 {
-      color: #ff003c;
-      font-size: 36px;
-    }
+.immortal h2{
+  color:#ff003c;
+}
 
-    .featured .shop_item_button {
-      background: linear-gradient(90deg, #ff003c, #ff7a00);
-    }
+.immortal .shop_item_button{
+  background:linear-gradient(90deg,#ff003c,#ff7a00);
+}
 
-    /* ================= SUPREME ================= */
-    .highlight {
-      background: linear-gradient(90deg, gold, orange);
-      color: black;
-      font-weight: 900;
-    }
+/* ================= SUPREME ================= */
+.supreme{
+  border:2px solid gold;
+  box-shadow:0 0 60px rgba(255,215,0,0.7);
+}
 
-    /* ================= FOOTER ================= */
-    footer {
-      text-align: center;
-      padding: 40px;
-      background: #03040a;
-    }
+.supreme h2{
+  color:gold;
+  font-size:34px;
+}
 
-    footer a {
-      color: #777;
-      text-decoration: none;
-      font-size: 14px;
-    }
-  </style>
+.supreme .shop_item_button{
+  background:linear-gradient(90deg,gold,orange);
+  color:black;
+  font-weight:900;
+}
+
+/* ================= FOOTER ================= */
+footer{
+  background:#03040a;
+  padding:40px;
+  text-align:center;
+}
+
+footer a{
+  color:#777;
+  text-decoration:none;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:1200px){
+  .shop_items_grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:600px){
+  .shop_items_grid{
+    grid-template-columns:1fr;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <nav class="desktop_navbar">
-  <a href="index.html">
-    <img class="desktop_navbar_logo_img" src="media/logo_small.png">
-  </a>
+  <a href="index.html"><img class="desktop_navbar_logo_img" src="media/logo_small.png"></a>
   <div class="desktop_navbar_links">
     <a href="index.html">Home</a>
     <a href="index.html#about">About</a>
@@ -214,7 +233,9 @@
 
 <div class="mainflex">
   <div class="main1">
-    <img class="main1_logo" src="media/OZAM-NATION (1).png">
+    <a class="main1_logo_a" href="#">
+      <img class="main1_logo" src="media/OZAM-NATION (1).png" alt="logo">
+    </a>
     <div class="main1_description">
       Minecraft,<span class="main1_actcent"> already done before</span>.
     </div>
@@ -223,38 +244,29 @@
 
 <header class="shop_header">
   <h1 class="shop_title">OzamNation Ranks Shop</h1>
-  <p class="shop_subtitle">Choose your destiny. Become IMMORTAL.</p>
+  <p class="shop_subtitle">Upgrade your power. Reach IMMORTAL.</p>
 </header>
 
 <section class="shop_page">
-  <h1 class="headline">Ranks Shop</h1>
+<div class="shop_items_grid">
 
-  <div class="shop_items_grid">
+<!-- 12 RANKS -->
+<div class="shop_item"><img src="media/rank_vip.png"><h2>VIP</h2><p>Basic perks</p><span>$5</span><a class="shop_item_button">Buy</a></div>
+<div class="shop_item"><img src="media/rank_vipplus.png"><h2>VIP+</h2><p>Extra commands</p><span>$7</span><a class="shop_item_button">Buy</a></div>
+<div class="shop_item"><img src="media/rank_mvp.png"><h2>MVP</h2><p>Kits & priority</p><span>$10</span><a class="shop_item_button">Buy</a></div>
+<div class="shop_item"><img src="media/rank_mvpplus.png"><h2>MVP+</h2><p>Cosmetics</p><span>$13</span><a class="shop_item_button">Buy</a></div>
 
-    <div class="shop_item"><img src="media/rank_vip.png"><h2>VIP</h2><p>Basic perks</p><span>$5</span><a class="shop_item_button">Buy</a></div>
-    <div class="shop_item"><img src="media/rank_vipplus.png"><h2>VIP+</h2><p>Extra commands</p><span>$7</span><a class="shop_item_button">Buy</a></div>
-    <div class="shop_item"><img src="media/rank_mvp.png"><h2>MVP</h2><p>Priority & kits</p><span>$10</span><a class="shop_item_button">Buy</a></div>
-    <div class="shop_item"><img src="media/rank_mvpplus.png"><h2>MVP+</h2><p>Cosmetics</p><span>$13</span><a class="shop_item_button">Buy</a></div>
-    <div class="shop_item"><img src="media/rank_legend.png"><h2>LEGEND</h2><p>Legendary power</p><span>$20</span><a class="shop_item_button">Buy</a></div>
-    <div class="shop_item"><img src="media/rank_god.png"><h2>GOD</h2><p>God perks</p><span>$40</span><a class="shop_item_button">Buy</a></div>
+<div class="shop_item"><img src="media/rank_elite.png"><h2>ELITE</h2><p>Elite perks</p><span>$15</span><a class="shop_item_button">Buy</a></div>
+<div class="shop_item"><img src="media/rank_hero.png"><h2>HERO</h2><p>Hero powers</p><span>$18</span><a class="shop_item_button">Buy</a></div>
+<div class="shop_item"><img src="media/rank_legend.png"><h2>LEGEND</h2><p>Legendary</p><span>$20</span><a class="shop_item_button">Buy</a></div>
+<div class="shop_item"><img src="media/rank_mythic.png"><h2>MYTHIC</h2><p>Mythic power</p><span>$25</span><a class="shop_item_button">Buy</a></div>
 
-    <div class="shop_item featured">
-      <img src="media/rank_owner.png">
-      <h2>IMMORTAL</h2>
-      <p>ALL perks unlocked</p>
-      <span>$50</span>
-      <a class="shop_item_button">Become Immortal</a>
-    </div>
+<div class="shop_item"><img src="media/rank_titan.png"><h2>TITAN</h2><p>Titan strength</p><span>$30</span><a class="shop_item_button">Buy</a></div>
+<div class="shop_item"><img src="media/rank_god.png"><h2>GOD</h2><p>God perks</p><span>$40</span><a class="shop_item_button">Buy</a></div>
+<div class="shop_item immortal"><img src="media/rank_owner.png"><h2>IMMORTAL</h2><p>All perks</p><span>$50</span><a class="shop_item_button">Become Immortal</a></div>
+<div class="shop_item supreme"><img src="media/rank_owner.png"><h2>SUPREME</h2><p>Absolute rule</p><span>$60</span><a class="shop_item_button">Rule Server</a></div>
 
-    <div class="shop_item featured">
-      <img src="media/rank_owner.png">
-      <h2>SUPREME</h2>
-      <p>Absolute dominance</p>
-      <span>$60</span>
-      <a class="shop_item_button highlight">Rule the Server</a>
-    </div>
-
-  </div>
+</div>
 </section>
 
 <footer>
