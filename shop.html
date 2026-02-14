@@ -1,188 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- ================= META ================= -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OzamNation | Ranks Shop</title>
+  <link rel="icon" href="media/favicon.png" type="image/png">
 
-    <!-- ================= TITLE ================= -->
-    <title>OzamNation | Ranks Shop</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-    <!-- ================= STYLES ================= -->
-    <link rel="stylesheet" href="media/style.css">
+    body {
+      background: radial-gradient(circle at top, #0b0f1a, #05060a);
+      color: white;
+    }
 
-    <!-- ================= ICON ================= -->
-    <link rel="icon" href="media/favicon.png" type="image/png">
+    /* ================= NAVBAR ================= */
+    .desktop_navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 8%;
+      background: rgba(0,0,0,0.7);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+
+    .desktop_navbar_logo_img {
+      height: 45px;
+    }
+
+    .desktop_navbar_links a {
+      color: #ccc;
+      margin-left: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .desktop_navbar_links a:hover,
+    .desktop_navbar_links .active {
+      color: #fff;
+    }
+
+    /* ================= HERO ================= */
+    .mainflex {
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .main1_logo {
+      width: 300px;
+      margin-bottom: 30px;
+    }
+
+    .main1_description {
+      font-size: 40px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .main1_actcent {
+      color: gold;
+      margin-left: 10px;
+    }
+
+    /* ================= SHOP HEADER ================= */
+    .shop_header {
+      text-align: center;
+      padding: 100px 10% 40px;
+    }
+
+    .shop_title {
+      font-size: 70px;
+      font-weight: 900;
+      margin-bottom: 20px;
+    }
+
+    .shop_subtitle {
+      color: #aaa;
+      font-size: 22px;
+    }
+
+    /* ================= SHOP ================= */
+    .shop_page {
+      padding: 80px 8% 120px;
+    }
+
+    .headline {
+      text-align: center;
+      font-size: 64px;
+      font-weight: 900;
+      margin-bottom: 80px;
+    }
+
+    .shop_items_grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 45px;
+    }
+
+    .shop_item {
+      background: linear-gradient(145deg, #0f1324, #070914);
+      border-radius: 26px;
+      padding: 50px 30px;
+      text-align: center;
+      transition: 0.4s;
+      box-shadow: 0 0 0 rgba(0,0,0,0);
+    }
+
+    .shop_item img {
+      width: 120px;
+      margin-bottom: 25px;
+    }
+
+    .shop_item h2 {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .shop_item p {
+      color: #bbb;
+      margin-bottom: 20px;
+    }
+
+    .shop_item span {
+      display: block;
+      font-size: 30px;
+      font-weight: 900;
+      margin-bottom: 25px;
+    }
+
+    .shop_item_button {
+      display: inline-block;
+      padding: 16px 38px;
+      border-radius: 50px;
+      background: #5865f2;
+      color: white;
+      font-weight: 800;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .shop_item:hover {
+      transform: translateY(-15px) scale(1.05);
+      box-shadow: 0 40px 90px rgba(0,0,0,0.8);
+    }
+
+    .shop_item_button:hover {
+      background: #7b86ff;
+      transform: scale(1.1);
+    }
+
+    /* ================= IMMORTAL ================= */
+    .featured {
+      border: 2px solid #ff003c;
+      box-shadow: 0 0 60px rgba(255,0,60,0.6);
+    }
+
+    .featured h2 {
+      color: #ff003c;
+      font-size: 36px;
+    }
+
+    .featured .shop_item_button {
+      background: linear-gradient(90deg, #ff003c, #ff7a00);
+    }
+
+    /* ================= SUPREME ================= */
+    .highlight {
+      background: linear-gradient(90deg, gold, orange);
+      color: black;
+      font-weight: 900;
+    }
+
+    /* ================= FOOTER ================= */
+    footer {
+      text-align: center;
+      padding: 40px;
+      background: #03040a;
+    }
+
+    footer a {
+      color: #777;
+      text-decoration: none;
+      font-size: 14px;
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- ==================================================
-                         NAVBAR
-    =================================================== -->
-    <nav class="desktop_navbar">
-        <a href="index.html">
-            <img class="desktop_navbar_logo_img" src="media/logo_small.png" alt="OzamNation Logo">
-        </a>
+<nav class="desktop_navbar">
+  <a href="index.html">
+    <img class="desktop_navbar_logo_img" src="media/logo_small.png">
+  </a>
+  <div class="desktop_navbar_links">
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#discord">Community</a>
+    <a href="shop.html" class="active">Shop</a>
+  </div>
+</nav>
 
-        <div class="desktop_navbar_links">
-            <a href="index.html" class="desktop_navbar_link">Home</a>
-            <a href="index.html#about" class="desktop_navbar_link scroll">About</a>
-            <a href="index.html#discord" class="desktop_navbar_link scroll">Community</a>
-            <a href="shop.html" class="desktop_navbar_link active">Shop</a>
-        </div>
-    </nav>
-    <!-- ================= HERO / TOP SECTION ================= -->
 <div class="mainflex">
   <div class="main1">
-    <a class="main1_logo_a" href="index.html">
-      <img class="main1_logo" src="media/OZAM-NATION (1).png" alt="logo">
-    </a>
-
+    <img class="main1_logo" src="media/OZAM-NATION (1).png">
     <div class="main1_description">
-      <a>Minecraft,<br>like</a>
-      <a class="main1_actcent">already done before</a><a>.</a>
+      Minecraft,<span class="main1_actcent"> already done before</span>.
     </div>
   </div>
 </div>
 
+<header class="shop_header">
+  <h1 class="shop_title">OzamNation Ranks Shop</h1>
+  <p class="shop_subtitle">Choose your destiny. Become IMMORTAL.</p>
+</header>
 
-    <!-- ==================================================
-                       SHOP HEADER
-    =================================================== -->
-    <header class="shop_header">
-        <h1 class="shop_title">OzamNation Ranks Shop</h1>
-        <p class="shop_subtitle">
-            Upgrade your experience, unlock exclusive perks, and support the server.
-        </p>
-    </header>
-
-    <!-- ==================================================
-                       SHOP SECTION
-    =================================================== -->
-  <section class="shop_page">
-
+<section class="shop_page">
   <h1 class="headline">Ranks Shop</h1>
 
   <div class="shop_items_grid">
 
-    <!-- RANK 1 -->
-    <div class="shop_item">
-      <img src="media/rank_vip.png" alt="VIP">
-      <h2>VIP</h2>
-      <p>Colored chat & basic perks</p>
-      <span>$5</span>
-      <a class="shop_item_button">Buy</a>
-    </div>
+    <div class="shop_item"><img src="media/rank_vip.png"><h2>VIP</h2><p>Basic perks</p><span>$5</span><a class="shop_item_button">Buy</a></div>
+    <div class="shop_item"><img src="media/rank_vipplus.png"><h2>VIP+</h2><p>Extra commands</p><span>$7</span><a class="shop_item_button">Buy</a></div>
+    <div class="shop_item"><img src="media/rank_mvp.png"><h2>MVP</h2><p>Priority & kits</p><span>$10</span><a class="shop_item_button">Buy</a></div>
+    <div class="shop_item"><img src="media/rank_mvpplus.png"><h2>MVP+</h2><p>Cosmetics</p><span>$13</span><a class="shop_item_button">Buy</a></div>
+    <div class="shop_item"><img src="media/rank_legend.png"><h2>LEGEND</h2><p>Legendary power</p><span>$20</span><a class="shop_item_button">Buy</a></div>
+    <div class="shop_item"><img src="media/rank_god.png"><h2>GOD</h2><p>God perks</p><span>$40</span><a class="shop_item_button">Buy</a></div>
 
-    <!-- RANK 2 -->
-    <div class="shop_item">
-      <img src="media/rank_vipplus.png" alt="VIP+">
-      <h2>VIP+</h2>
-      <p>VIP perks + extra commands</p>
-      <span>$7</span>
-      <a class="shop_item_button">Buy</a>
-    </div>
-
-    <!-- RANK 3 -->
-    <div class="shop_item">
-      <img src="media/rank_mvp.png" alt="MVP">
-      <h2>MVP</h2>
-      <p>Priority queue & kits</p>
-      <span>$10</span>
-      <a class="shop_item_button">Buy</a>
-    </div>
-
-    <!-- RANK 4 -->
-    <div class="shop_item">
-      <img src="media/rank_mvpplus.png" alt="MVP+">
-      <h2>MVP+</h2>
-      <p>MVP perks + cosmetics</p>
-      <span>$13</span>
-      <a class="shop_item_button">Buy</a>
-    </div>
-
-    <!-- RANK 5 -->
-    <div class="shop_item">
-      <img src="media/rank_elite.png" alt="ELITE">
-      <h2>ELITE</h2>
-      <p>Elite commands</p>
-      <span>$15</span>
-      <a class="shop_item_button">Buy</a>
-    </div>
-
-    <!-- RANK 6 -->
-    <div class="shop_item">
-      <img src="media/rank_hero.png" alt="HERO">
-      <h2>HERO</h2>
-      <p>Hero abilities</p>
-      <span>$18</span>
-      <a class="shop_item_button">Buy</a>
-    </div>
-
-    <!-- RANK 7 -->
-    <div class="shop_item">
-      <img src="media/rank_legend.png" alt="LEGEND">
-      <h2>LEGEND</h2>
-      <p>Legendary perks</p>
-      <span>$20</span>
-      <a class="shop_item_button">Buy</a>
-    </div>
-
-    <!-- RANK 8 -->
-    <div class="shop_item">
-      <img src="media/rank_mythic.png" alt="MYTHIC">
-      <h2>MYTHIC</h2>
-      <p>Mythic power</p>
-      <span>$25</span>
-      <a class="shop_item_button">Buy</a>
-    </div>
-
-    <!-- RANK 9 -->
-    <div class="shop_item">
-      <img src="media/rank_titan.png" alt="TITAN">
-      <h2>TITAN</h2>
-      <p>Titan strength</p>
-      <span>$30</span>
-      <a class="shop_item_button">Buy</a>
-    </div>
-
-    <!-- RANK 10 -->
-    <div class="shop_item">
-      <img src="media/rank_god.png" alt="GOD">
-      <h2>GOD</h2>
-      <p>God-level perks</p>
-      <span>$40</span>
-      <a class="shop_item_button">Buy</a>
-    </div>
-
-    <!-- RANK 11 -->
-    <div class="shop_item">
-      <img src="media/rank_owner.png" alt="IMMORTAL">
-      <h2>IMMORTAL</h2>
-      <p>All perks unlocked</p>
-      <span>$50</span>
-      <a class="shop_item_button">Buy</a>
-    </div>
-
-    <!-- RANK 12 -->
     <div class="shop_item featured">
-      <img src="media/rank_owner.png" alt="SUPREME">
+      <img src="media/rank_owner.png">
+      <h2>IMMORTAL</h2>
+      <p>ALL perks unlocked</p>
+      <span>$50</span>
+      <a class="shop_item_button">Become Immortal</a>
+    </div>
+
+    <div class="shop_item featured">
+      <img src="media/rank_owner.png">
       <h2>SUPREME</h2>
-      <p>Ultimate rank</p>
+      <p>Absolute dominance</p>
       <span>$60</span>
-      <a class="shop_item_button highlight">Buy</a>
+      <a class="shop_item_button highlight">Rule the Server</a>
     </div>
 
   </div>
 </section>
 
+<footer>
+  <a href="https://www.youtube.com/@OzamGameOver">Made by Ozam • 2026</a>
+</footer>
 
-    <!-- ==================================================
-                         FOOTER
-    =================================================== -->
-    <footer class="copyright_div">
-      <a href="https://www.youtube.com/@OzamGameOver" class="copyright">Made by ozam 2026 - Just For you</a>
-    </footer>
-  </body>
-</html>.
+</body>
+</html>
